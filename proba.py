@@ -4,6 +4,11 @@ import tempfile
 import streamlit as st
 from PIL import Image, ImageOps
 
+st.markdown(
+    '<meta name="google-site-verification" content="ba80sENhom1" />',
+    unsafe_allow_html=True
+)
+
 st.set_page_config(page_title="Image to PDF", layout="centered")
 
 st.title("Image to PDF")
