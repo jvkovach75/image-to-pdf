@@ -1,28 +1,27 @@
 import os
 import tempfile
+
 import streamlit as st
 from PIL import Image, ImageOps
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
+
 
 st.set_page_config(page_title="Image to PDF", layout="centered")
 
 st.title("Image to PDF")
 st.markdown("### Free Image to PDF Converter")
 st.write("Convert JPG, JPEG and PNG images into PDF instantly. Fast, simple and free.")
-st.write("Convert JPG, JPEG and PNG images to PDF instantly.")
-st.caption("Free online image to PDF converter")
 
 file = st.file_uploader("Upload image", type=["png", "jpg", "jpeg"])
 
 if file:
+    st.image(file, caption="Preview", use_container_width=True)
+
     try:
         image = Image.open(file)
-
-        # Ispravi rotaciju sa telefona (EXIF)
         image = ImageOps.exif_transpose(image)
 
-        # PNG / transparent background -> RGB
         if image.mode in ("RGBA", "P"):
             background = Image.new("RGB", image.size, (255, 255, 255))
             if image.mode == "RGBA":
@@ -60,7 +59,7 @@ if file:
         c.showPage()
         c.save()
 
-        st.success("Image converted successfully!")
+        st.success("Your PDF is ready!")
 
         with open(pdf_path, "rb") as f:
             st.download_button(
@@ -81,3 +80,6 @@ if file:
                 os.remove(pdf_path)
         except Exception:
             pass
+
+st.markdown("---")
+st.markdown("**Keywords:** image to pdf, jpg to pdf, png to pdf, convert image to pdf online")
