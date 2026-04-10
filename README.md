@@ -2,7 +2,8 @@
 
 Free online tool to convert images (JPG, JPEG, PNG) into PDF.
 
-👉 Live app: https://imagetwopdf.streamlit.app/
+Live tool: https://imagetwopdf.streamlit.app/
+Landing page: https://jvkovach75.github.io/image-to-pdf/
 
 ## Features
 - Convert image to PDF instantly
