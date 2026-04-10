@@ -5,7 +5,7 @@ import streamlit as st
 from PIL import Image, ImageOps
 
 st.markdown(
-    '<meta name="google-site-verification" content="ba80sENhom1" />',
+    '<meta name="google-site-verification" content="ba8OsENhom1Z0b7lfgkLwUb62iYVtqAw2KfCBeZovhs" />',
     unsafe_allow_html=True
 )
 
