@@ -8,6 +8,8 @@ from reportlab.lib.pagesizes import A4
 st.set_page_config(page_title="Image to PDF", layout="centered")
 
 st.title("Image to PDF")
+st.markdown("### Free Image to PDF Converter")
+st.write("Convert JPG, JPEG and PNG images into PDF instantly. Fast, simple and free.")
 st.write("Convert JPG, JPEG and PNG images to PDF instantly.")
 st.caption("Free online image to PDF converter")
 
